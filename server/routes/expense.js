@@ -42,7 +42,7 @@ router.delete("/:id", async (req, res) => {
         await Expense.findByIdAndDelete(req.params.id)
         res.status(201).json("Deleted successfully")
     } catch (error) {
-        res.status(500).json(err)
+        res.status(500).json(error)
     }
 })
 module.exports = router;
